@@ -98,9 +98,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </div>
     </div>
 
-    <button class="w3-button w3-light-grey w3-padding-large w3-section><a href="DivyaResume.pdf" target="_blank">
+    <a href="/download"><button class="w3-button w3-light-grey w3-padding-large w3-section><a href="DivyaResume.pdf" target="_blank">
       <i class="fa fa-download"></i> Download Resume
-    </button>
+      </button></a>
     
     <!-- Grid for pricing tables -->
     
@@ -157,6 +157,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- END PAGE CONTENT -->
 </div>
-
+<script type="text/javascript">
+  const express=require('express');
+  const path=require('path');
+  const app=express();
+  app.get('/download',(req,res)=>{
+    res.download(path.resolve(__dirname)+'/DivyaResume.pdf');
+  });
+  //const PORT=process.env.PORT;
+  //app.listen(PORT);
+</script>
 </body>
 </html>
