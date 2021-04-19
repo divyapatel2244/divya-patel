@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<title>TreatHub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+#form{
+  padding: 25px;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://wallpaperaccess.com/full/619997.png");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">TreatHub</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#form" class="w3-bar-item w3-button"><i class="fa fa-user"></i> ADD SYMPTOMS</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> DAILY TIPS</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT US</a>
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#form" onclick="w3_close()" class="w3-bar-item w3-button">ADD SYMPTOMS</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">DAILY TIPS</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT US</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span style="font-weight: 100px;font-size: 70px;color: rgb(51, 204, 204);">Welcome to TreatHub</span><br>
+    <span style="font-weight: 100px;font-size: 30px;color: rgb(51, 204, 204);">We help to cure yourself by your own</span><br>
+    <!--<span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>-->
+    <p><a href="#about" type="button" style="color: rgb(51, 204, 204)" class="btn">Learn more and start today</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+
+
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+  <div style="padding-left: 20px;">
+    <h1>Good health is not something we can buy. ...</h1>
+  </div>
+</div>
+
+<!-- Add Symptomps -->
+<div class="mx-auto" id="form">
+  <h1 style="text-align: center;">Add Symptomps</h1>
+  <hr>
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputState">Eyes</label>
+      <select id="inputState" class="form-control">
+        <option selected>Auspicious</option>
+        <option>Severe,sudden eye pain</option>
+        <option>Recurrent pain in or around eyes</option>
+        <option>Hazy,blurred or double vision</option>
+        <option>seeing flashes of light or sudden brigth floating spots</option>
+      </select>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">Nose</label>
+      <select id="inputState" class="form-control">
+        <option selected>Auspicious</option>
+        <option>Pain in the face</option>
+        <option>Nasal congestion and distorted sense of smell</option>
+        <option>running nose</option>
+        <option>fatigue and fever</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group col-md-4">
+      <label for="inputState">Mouth</label>
+      <select id="inputState" class="form-control">
+        <option selected>Auspicious</option>
+        <option>bleeding or swollen gums after brushing or flossing</option>
+        <option>chronic bad breath</option>
+        <option>pain in teeth</option>
+        <option>loose teeth</option>
+      </select>
+    </div>
+  <div class="form-group col-md-4">
+      <label for="inputState">Hands-Legs</label>
+      <select id="inputState" class="form-control">
+        <option selected>Auspicious</option>
+        <option>cold hand and feet</option>
+        <option>unusal pain</option>
+        <option>congnitive dysfunction</option>
+        <option>fatigue</option>
+        <option>skin color change</option>
+      </select>
+    </div>
+  <div class="form-group col-md-4">
+      <label for="inputState">Stomoch</label>
+      <select id="inputState" class="form-control">
+        <option selected>Auspicious</option>
+        <option>Abdominal pain or cramping</option>
+        <option>belching</option>
+        <option>abdominal sewlling , bloating</option>
+        <option>unusal Pain</option>
+      </select>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">chest</label>
+      <select id="inputState" class="form-control">
+        <option selected>Auspicious</option>
+        <option>pain</option>
+        <option>headach</option>
+      </select>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">Ears</label>
+      <select id="inputState" class="form-control">
+        <option selected>Auspicious</option>
+        <option>Pain when lying down</option>
+        <option>crying more than usual</option>
+        <option>fussiness</option>
+        <option>loss of balance</option>
+        <option>fever</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group col-md-4" style="padding: 15px;">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        I Am Sure With This Details
+      </label>
+    </div>
+  </div>
+  <div style="padding-left: 15px;">
+  <button type="submit" class="btn btn-primary">Show Result</button>
+  </div>
+</form>
+</div>
+
+<!-- Result -->
+<div class="w3-container w3-center w3-dark-grey">
+
+  <h1>Your Result</h1>
+  <h2>..........</h2><hr>
+  <h2>..........</h2><hr>
+  <h2>..........</h2><hr>
+  <h2>..........</h2><hr>
+
+</div>
+
+<!-- Tips For Cure -->
+<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="cure">
+  <h3>Cure</h3>
+  <p class="w3-large">Choose a method for cure</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Ayurveda (Recommanded)</li>
+        <li class="w3-padding-16"><b>Boswellia</b></li>
+        <li class="w3-padding-16"><b>Breahmi</b></li>
+        <li class="w3-padding-16"><b>Cumin</b></li>
+        <li class="w3-padding-16"><b>Turmeric</b></li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">Basic Cure</h2>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">For More</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-red w3-xlarge w3-padding-48">Allopathic</li>
+        <li class="w3-padding-16"><b>Ezoter</b></li>
+        <li class="w3-padding-16"><b>garitel</b></li>
+        <li class="w3-padding-16"><b>oflopt</b></li>
+        <li class="w3-padding-16"><b>Levocertizine</b></li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">Basic Cure</h2>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">For More</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Yogas(recommanded)</li>
+        <li class="w3-padding-16"><b>Sirsasan</b></li>
+        <li class="w3-padding-16"><b>Sarvangasan</b></li>
+        <li class="w3-padding-16"><b>Halayasan</b></li>
+        <li class="w3-padding-16"><b>Savasan</b></li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">Basic Cure</h2>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">For More</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Skills Section -->
+<div class="w3-container w3-light-grey w3-padding-64" style="padding: 10px;" id="work">
+  <h1>Daily Tips</h1>
+  <hr>
+  <ul>
+  <li>Eat a healthy diet.</li>
+  <li>Consume less salt and sugar.</li>
+  <li>Reduce intake of harmful fats.</li>
+  <li>Avoid harmful use of alcohol.</li>
+  <li>Don't smoke.</li>
+  <li>Be active.</li>
+  <li>Check your blood pressure regularly.</li>
+  <li>Get tested.</li>
+  </ul>
+</div>
+
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Ahemdabad, India</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +91 33968492048</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    <!-- Image of location/map -->
+    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+  </div>
+</div>
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">ABOUT US</h3>
+  <p class="w3-center w3-large">Created Of TreatHub</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Yash Khant</p>
+      <p>The leader of Team Code For Futere</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Aarzoo Karavadia</p>
+      <p>Developer</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Divya Patel</p>
+      <p>Developer</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Naitik Dhorajiya</p>
+      <p>Developer</p>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
